@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "021fc7df-33db-4610-a76b-a8c801d48030",
+		"name": "support-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "teste@teste.com",
+							"type": "text"
+						},
+						{
+							"key": "frequency",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "term",
+							"value": "rock123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/notification/",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"notification",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find a single notification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/notification/5f1a78c7eb55eb04622bb958",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"notification",
+						"5f1a78c7eb55eb04622bb958"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all notifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/notification/",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"notification",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a single notification",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:3001/notification/5f1a762bf9590402fee6c3f2",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"notification",
+						"5f1a762bf9590402fee6c3f2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a notification",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "abc@teste.com",
+							"type": "text"
+						},
+						{
+							"key": "frequency",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "term",
+							"value": "rocking",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/notification/5f1a78c7eb55eb04622bb958",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"notification",
+						"5f1a78c7eb55eb04622bb958"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "support-test",
+  "version": "1.0.0",
+  "description": "An price notifier api",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "start:dev": "nodemon -L app.js"
+  },
+  "keywords": [
+    "notifier",
+    "api",
+    "node"
+  ],
+  "author": "RankMyAPP@Developers",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "joi": "^17.1.1",
+    "mongoose": "^5.2.6",
+    "node-cron": "^1.2.1",
+    "nodemailer": "^4.6.7",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "nodemon": "^2.0.4"
+  }
+}
