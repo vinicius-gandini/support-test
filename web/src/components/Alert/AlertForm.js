@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { updateAlert, createAlert, selectAlert } from '../../actions/Alert';
+
+import './AlertForm.css';
+
 class AlertForm extends Component {
   constructor(props) {
     super(props);
@@ -48,6 +51,14 @@ class AlertForm extends Component {
           type="button"
           className="btn btn-light"
           onClick={ (e) => this.cancelAlert() }>Cancel</button>
+
+        {
+          alert.error && (
+            <div className="alertContainer">
+              <p className="alertMessage">{alert.message}</p>
+            </div>
+          )
+        }
       </form>
     );
   }

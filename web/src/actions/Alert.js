@@ -9,7 +9,9 @@ export const DELETE_ALERT = 'DELETE_ALERT';
 export const ERROR_ALERT = 'ERROR_ALERT';
 
 const errorHandler = (err) => {
-  const { message } = err;
+  const { response } = err;
+
+  const { message } = response.data.errors[0];
 
   return {
     type: ERROR_ALERT,
